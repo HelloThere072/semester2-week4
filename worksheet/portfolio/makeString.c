@@ -8,12 +8,15 @@ Student ID:
 #include <string.h>
 
 int main( int argc, char **argv ) {
+    char buffer[100] = ""; 
 
-    // define appropriate data to hold your answer
+    for (int i = 1; i < argc; i++) {
+        strcat(buffer, argv[i]);
+        if (i < argc - 1) {
+            strcat(buffer, "-");
+        }
+    }
 
-    // process the command-line data using appropriate string functions
-
-    printf("%s\n",buffer); // use only this single print statement in your submitted code
-
+    printf("%s\n", buffer);
     return 0;
 }
